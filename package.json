@@ -1,0 +1,72 @@
+{
+  "name": "html-literal",
+  "version": "1.0.0",
+  "description": "Tagged template literal for authoring HTML in JavaScript",
+  "main": "build/src/index.js",
+  "types": "build/src/index.d.ts",
+  "author": "Priit Kallas",
+  "keywords": [
+    "html",
+    "tagged",
+    "template",
+    "literal",
+    "typescript"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kallaspriit/html-literal.git"
+  },
+  "scripts": {
+    "start": "ts-node example/index.ts",
+    "build": "yarn tidy:build && tsc",
+    "production": "node build/example/index",
+    "lint": "tslint --project tsconfig.json --format codeFrame",
+    "lint-fix": "yarn lint --fix",
+    "prettier": "prettier --write src/**/*.ts example/**/*.ts",
+    "tidy": "yarn tidy:build && yarn tidy:coverage",
+    "tidy:build": "rimraf build",
+    "tidy:coverage": "rimraf coverage",
+    "test": "jest",
+    "test-watch": "jest --watch --collectCoverage",
+    "coverage": "yarn tidy:coverage && jest --collectCoverage",
+    "validate": "yarn prettier && yarn build && yarn lint && yarn coverage",
+    "coveralls": "cat ./coverage/lcov.info | coveralls"
+  },
+  "dependencies": {
+    "@types/circular-json": "^0.4.0",
+    "circular-json": "^0.5.9",
+    "strip-indent": "^2.0.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^23.3.9",
+    "@types/node": "^10.12.9",
+    "coveralls": "^3.0.2",
+    "jest": "^23.6.0",
+    "prettier": "^1.15.2",
+    "rimraf": "^2.6.2",
+    "ts-jest": "^23.10.4",
+    "tslint": "^5.11.0",
+    "typescript": "^3.1.6",
+    "typestrict": "^1.0.1"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.(ts|tsx)$": "ts-jest"
+    },
+    "roots": [
+      "src"
+    ],
+    "collectCoverage": false,
+    "collectCoverageFrom": [
+      "src/**/*.ts"
+    ],
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "json"
+    ]
+  }
+}
