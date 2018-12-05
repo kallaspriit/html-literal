@@ -1,6 +1,6 @@
 {
   "name": "html-literal",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Tagged template literal for authoring HTML in JavaScript",
   "main": "build/src/index.js",
   "types": "build/src/index.d.ts",
