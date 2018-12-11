@@ -1,4 +1,4 @@
-import CircularJSON from "circular-json";
+import { stringify } from "flatted";
 import stripIndent from "strip-indent";
 
 // list of possible simple values
@@ -75,5 +75,5 @@ function resolveExpression(expression: Concatenatable): string {
   }
 
   // return stringified value, handles circular references
-  return CircularJSON.stringify(expression, undefined, 2);
+  return stringify(expression, undefined, 2);
 }

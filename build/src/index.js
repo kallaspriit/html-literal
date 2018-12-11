@@ -3,7 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var circular_json_1 = __importDefault(require("circular-json"));
+var flatted_1 = require("flatted");
 var strip_indent_1 = __importDefault(require("strip-indent"));
 // html tag function, accepts simple values, arrays, promises
 function html(template) {
@@ -64,6 +64,6 @@ function resolveExpression(expression) {
         return expression.toString();
     }
     // return stringified value, handles circular references
-    return circular_json_1.default.stringify(expression, undefined, 2);
+    return flatted_1.stringify(expression, undefined, 2);
 }
 //# sourceMappingURL=index.js.map

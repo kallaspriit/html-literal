@@ -4,10 +4,10 @@ exports[`html-literal should work as intended 1`] = `
 "<h1>HTML Tagged Template Literal</h1>
       <p>Name: Chuck Norris</p>
       <p>Age: 42</p>
-      <p>Details: <pre>{
-  \\"Residence\\": \\"Navasota, Texas, U.S.\\",
-  \\"Occupation\\": \\"Actor, martial artist, film producer, screenwriter, air policeman (U.S. Air Force).\\"
-}</pre></p>
+      <p>Details: <pre>[{
+  \\"Residence\\": \\"1\\",
+  \\"Occupation\\": \\"2\\"
+},\\"Navasota, Texas, U.S.\\",\\"Actor, martial artist, film producer, screenwriter, air policeman (U.S. Air Force).\\"]</pre></p>
       <p>Weakness: </p>
       <p>Enemy: [function]</p>
       <p>Interests: [promise]</p>
